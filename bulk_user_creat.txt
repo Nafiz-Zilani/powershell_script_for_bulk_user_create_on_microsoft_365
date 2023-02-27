@@ -1,0 +1,3 @@
+﻿Connect-MsolService
+
+Import-Csv -Path "CSV file path" | foreach {New-MsolUser -UserPrincipalName $_.UserPrincipalName -DisplayName $_.DisplayName -FirstName $_.FirstName -LastName $_.LastName -Password $_.Password -LicenseAssignment $_.LicenseAssignment -UsageLocation "BD"}
